@@ -1,0 +1,15 @@
+
+
+#include <stdio.h>
+
+int main()
+{
+    float **mp , *fp, num;
+    
+    fp = &num;
+    mp = &fp;
+    **mp = 12.13;
+    printf("%f  %f  %f ",**mp , *fp, num);
+
+    return 0;
+}
