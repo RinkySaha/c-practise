@@ -1,0 +1,47 @@
+/******************************************************************************
+
+                            Online C Compiler.
+                Code, Compile, Run and Debug C program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <stdio.h>
+
+int
+main ()
+{
+  int a[1000][1000], i, j, n, m, dg1 = 0, dg2 = 0;
+  scanf ("%d", &n);
+  for (i = 0; i < n; i++)
+    {
+      for (j = 0; j < n; j++)
+	    {
+    	  scanf ("%d", &a[i][j]);
+	    }
+
+    }
+
+  i = j = 0;
+
+  while (i < n)
+    {
+      dg1 = dg1 + a[i][j];
+      i++;
+      j++;
+    }
+    
+  i =0;
+  j = n-1;
+
+  while (i < n)
+    {
+      dg2 = dg2 + a[i][j];
+      i++;
+      j--;
+    }
+
+  dg1 = abs(dg1-dg2);
+  
+  printf("%d",dg1);
+}
