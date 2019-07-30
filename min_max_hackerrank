@@ -1,0 +1,38 @@
+
+#include <stdio.h>
+
+int main ()
+{
+unsigned long long int a[5],sum=0, gtreatest,smallest;
+  int i, j;
+  
+  for (i = 0; i < 5; i++)
+  {
+      scanf("%lld",&a[i]);
+      if(i==0){
+          gtreatest=a[i];
+          smallest=a[i];
+      }
+      
+      else
+      {
+          if(a[i]>gtreatest){
+              gtreatest=a[i];
+          }
+          
+          if(a[i]<smallest){
+              smallest=a[i];
+          }
+      }
+      
+      sum=sum+a[i];
+      
+      
+  }
+  
+  
+  
+  
+  printf("%lld %lld",sum-gtreatest, sum-smallest);
+
+}
