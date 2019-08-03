@@ -9,28 +9,22 @@
 #include <string.h>
 
 int main(){
-    int n,k,a=1,b,i,band=0,bor=0,bxor=0,xr,or,nd;
-    scanf("%d %d",&n,&k);
+    int n,m,i,j;
 
-    while(a<=n){
-        for(b=a+1;b<=n;b++){
-           nd=a&b;
-           if(nd>band&&nd<k){
-            band=nd;
-           }
-           or=a|b;
-           if(or>bor&&or<k){
-            bor=or;
-           }
-           xr=a^b;
-           if(xr>bxor&&xr<k){
-            bxor=xr;
-           }
+    scanf("%d",&n);
+    m=n;
+    for(i=2*n-1;i>=1;i--){
+        for(j=2*n-1;j>=1;j--){
+            printf("%d",m);
         }
-        a++;
+        printf("\n");
+        if(i<=n){
+            m++;
+        }
+        else{
+            m--;
+        }
     }
-
-    printf("%d\n%d\n%d\n",band,bor,bxor);
 
 
     return 0;
